@@ -2,64 +2,51 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between bg-white px-16 py-32 sm:items-start dark:bg-black">
+    <main className="relative flex min-h-svh items-center justify-center overflow-hidden bg-[#f7f9fc] px-5 pt-8 pb-[4.5rem] text-center text-[#0b3065] sm:px-6">
+      <div
+        className="pointer-events-none absolute -top-52 -left-36 size-[22rem] rounded-full border border-[#bf922d]/15"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -right-40 -bottom-56 size-[22rem] rounded-full border border-[#bf922d]/15"
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 w-full max-w-[40rem]">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          className="mx-auto h-auto w-full max-w-[32rem]"
+          src="/kaltstern-logo.svg"
+          alt="Kaltstern GmbH"
+          width={866}
+          height={265}
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl leading-10 font-semibold tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>
-            or the
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+        <div
+          className="mx-auto mt-9 mb-6 h-1 w-16 bg-[#bf922d] sm:mt-10"
+          aria-hidden="true"
+        />
+        <p className="mb-3 text-xs font-bold tracking-[0.2em] text-[#bf922d] uppercase">
+          Kaltstern GmbH
+        </p>
+        <h1 className="font-serif text-[clamp(2.25rem,7vw,4.3rem)] leading-[1.05] font-normal tracking-[-0.035em] text-[#0b3065]">
+          Under maintenance
+        </h1>
+        <p className="mx-auto mt-5 max-w-md text-base leading-7 text-[#5b6b80] sm:text-[1.05rem] sm:leading-7">
+          Our website is currently being updated; for sales inquiries, please
+          contact us at{' '}
           <a
-            className="bg-foreground text-background flex h-12 w-full items-center justify-center gap-2 rounded-full px-5 transition-colors hover:bg-[#383838] md:w-[158px] dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="font-semibold text-[#0b3065] underline decoration-[#bf922d] decoration-2 underline-offset-4 transition-colors hover:text-[#bf922d] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#bf922d]"
+            href="mailto:Sales@kaltstern.de"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            sales@kaltstern.de
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          .
+        </p>
+      </div>
+
+      <p className="absolute bottom-6 z-10 m-0 text-xs tracking-[0.04em] text-[#5b6b80]">
+        © {new Date().getFullYear()} Kaltstern GmbH
+      </p>
+    </main>
   );
 }
